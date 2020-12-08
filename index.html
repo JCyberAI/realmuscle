@@ -3,17 +3,64 @@
     <head>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        
+        <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+         <!-- Font awesome css -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 
         <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
          <!-- CSS -->
-         <link href="styl.css" rel="stylesheet">
+         <link href="style.css" rel="stylesheet">
+
+        <title>Real Muscle</title>
+
 
     </head>
         <body>
+            <div class="navbar-fixed">
+                <nav class="teal">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <a href="#" class="brand-logo">Real Muscle</a>
+                        
+                            <!-- Burger HTML (needs citation!)-->
+                        <div id="mySidenav" class="sidenav">
+                        
+                          <a href="#">Home</a>
+                          <a href="#">...</a>
+                          <a href="#">...</a>
+                          <a href="#">...</a>
+                        </div>
+                        
+                        <div id="main">
+                          <span style="cursor:pointer" onclick="openNav(); closeNav()">
+                            <div class="container" onclick="myFunction(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                            </div>
+                        </span>
+                        </div>
+                            </a>
+                            <ul class="right hide-on-med-and-down">
+                                <!-- Nav Links -->
+                                <li>
+                                    <a href="#home">Home</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+                <!-- Main Body?  -->
             <div class="title">Real Muscle</div>
             <div class="property_carousel">
                 <div class="property_image"></div>
@@ -23,8 +70,10 @@
             </div>
         </body>
 
-        <!-- js references -->
-        
+         <!-- Compiled and minified JavaScript from materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+         <!-- js references -->
         <script src="./script/api.js"></script>
         <script src="./script/main.js"></script>
 </html>
