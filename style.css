@@ -3,7 +3,33 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-.sidenav {
+/* Carousel */
+.carousel .carousel-item{
+    position: relative;
+    bottom: 0;  
+}
+
+.carousel p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    bottom: 0;
+}
+
+/* Carousel */
+.slides{
+    position: relative;
+    bottom: 0;  
+}
+
+.slides p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    bottom: 0;
+}
+
+
+/* .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -75,4 +101,4 @@ body {
 
     font-weight: bold;
     font-size: larger;
-}
+} */

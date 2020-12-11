@@ -4,11 +4,11 @@
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+        
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Font awesome css -->
+     <!-- Font awesome css -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
@@ -42,12 +42,47 @@
         <div class="input-field col s10">
             <input placeholder="Enter MLS ID" id="MLSID" type="text" class="validate">
         </div>
-        <button class="btn-floating btn-large waves-effect waves-light red" id="addButton"><i
+        <button class="btn-floating btn-large waves-effect waves-light green" id="addButton"><i
                 class="material-icons">add</i></button>
+    </div>    
+    
+
+    <!-- Slider -->
+    <div class="slider slider-fixed-item">
+        <ul class="slides">
+          <li>
+            <img src="https://ap.rdcpix.com/6afeb9f8f715cff47dae64b9cc8aac6dl-m2767432257x.jpg" id="propertyimage1"> <!-- random image -->
+            <div class="caption left-align"> 
+              <div class="white-text bold" id="info-text">
+                <p>Price: <span id="price1"></span></p>
+                <p>Size: <span id="size1"></span></p>
+                <p>Rooms: <span id="rooms1"></span></p>
+                <p>Baths: <span id="baths1"></span></p>
+                <p class="map" href="#">Map</p>
+        </li>
+        <li>
+            <img src="https://ap.rdcpix.com/6afeb9f8f715cff47dae64b9cc8aac6dl-m2767432257x.jpg" id="propertyimage1"> <!-- random image -->
+            <div class="caption left-align"> 
+              <div class="white-text bold" id="info-text">
+                <p>Price: <span id="price1"></span></p>
+                <p>Size: <span id="size1"></span></p>
+                <p>Rooms: <span id="rooms1"></span></p>
+                <p>Baths: <span id="baths1"></span></p>
+                <p class="map" href="#">Map</p>
+        </li>
+            </div>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+
+      <!-- Remove Button -->
+      <div class="col 12 center">
+      <a class="waves-effect waves-light btn red">Remove</a>
     </div>
 
-
-    <div class="row">
+    <!-- <div class="row">
         <div class="col s6">
             <div class="card">
                 <div class="card-image">
@@ -86,8 +121,11 @@
             <div class="col s6 offset-s5"><a class="waves-effect waves-light btn-large" id="Removebutton2">Remove</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
+
+
+    <!-- footer -->
     <footer class="page-footer">
         <div class="container">
             <div class="row">
@@ -98,18 +136,36 @@
         </div>
 
     </footer>
+
+        <!-- Compiled and minified JavaScript from materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script src="./script/api.js"></script>
+    <script src="./script/main.js"></script>
+
+    <script>
+        //Sidenav
+        $(document).ready(function(){
+        $('.sidenav').sidenav();
+        });
+
+        //Carousel
+        $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+        });
+
+        //slider
+        $(document).ready(function(){
+            $('.slider').slider({
+                indicators:true,
+                interval:60000
+            });
+        });
+    </script>
+
 </body>
-
-<!-- Compiled and minified JavaScript from materialize -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-
-<!-- js references -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./script/api.js"></script>
-<script src="./script/main.js"></script>
-
-
 
 </html>
