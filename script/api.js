@@ -1,12 +1,11 @@
 $("#addButton").click(function () {
-    //use free rapidapi.com jquery and api key to call realtor.com api to get property information based on MLS ID
+
     const getmlsid = {
-        //"mlsid": document.getElementById("MLSID").value//
-        "mlsid": 1735570333
+        "mlsid": document.getElementById("MLSID").value
+        //"mlsid": 170307347//
     }
 
     const settings = {
-
         "async": true,
         "crossDomain": true,
         "url": "https://realtor.p.rapidapi.com/properties/v2/list-by-mls?mls_id=" + getmlsid.mlsid + "&offset=0&limit=10",
@@ -18,25 +17,26 @@ $("#addButton").click(function () {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        //console.log(response);
 
-        if ("#price1" === null) {
+        var size1 = $("#size1");
 
-            $("#price1").html("$" + response.price);
-            $('#size1').html(response.size + "sq ft");
-            $("#rooms1").html(response.room);
-            $("#baths1").html(response.bath);
-            $("#yearbuilt1").html(response.year);
-            $("#propertyimage1").html(`"<img src=" + ${reponse.image} + "alt='Property Image'>"`);
+        if (!size1.text()) {
+            //property 1
 
-            //get lon and lat from reponse
-            var lon = response.coord.lon;
-            var lat = response.coord.lon;
+            $("#price1").html("$" + response.properties[0].price);
+            $('#size1').text(response.properties[0].building_size.size + " sqft");
+            $("#rooms1").html(response.properties[0].beds);
+            $("#baths1").html(response.properties[0].baths);
+            $("#Property1").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
+            $("#propertyimage1").html("<img src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
+
+
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': 'nPC7ddCo7z7VCsBKTP46U5a2V0wpWWda8jYeuKR0IWA'
+                'apikey': 'u_S7zLzl6RKVpSByjwLMRquhfzRHlvCty7HlCCeWkwI'
             });
 
             // Obtain the default map types from the platform object
@@ -48,7 +48,7 @@ $("#addButton").click(function () {
                 maptypes.vector.normal.map,
                 {
                     zoom: 16,
-                    center: `{ lng: ${lon}, lat: ${lat} }`
+                    center: { lng: response.properties[0].address.lon, lat: response.properties[0].address.lat }
                 });
 
             // Define a variable holding SVG mark-up that defines an icon image:
@@ -61,30 +61,27 @@ $("#addButton").click(function () {
 
             // Create an icon, an object holding the latitude and longitude, and a marker:
             var icon = new H.map.Icon(svgMarkup),
-                coords = `{ lng: ${lon}, lat: ${lat} }`,
+                coords = { lng: response.properties[0].address.lon, lat: response.properties[0].address.lat },
                 marker = new H.map.Marker(coords, { icon: icon });
 
             // Add the marker to the map and center the map at the location of the marker:
             map.addObject(marker);
             map.setCenter(coords);
 
-        } else if ("#price2" === null) {
+        } else {
 
-            $("#price2").html("$" + response.price);
-            $('#size2').html(response.size + "sq ft");
-            $("#rooms2").html(response.room);
-            $("#baths2").html(response.bath);
-            $("#yearbuilt2").html(response.year);
-            $("#propertyimage2").html(`"<img src=" + ${reponse.image} + "alt='Property Image'>"`);
-
-            //get lon and lat from reponse
-            var lon = response.coord.lon;
-            var lat = response.coord.lon;
+            //Property 2
+            $("#price2").html("$" + response.properties[0].price);
+            $('#size2').html(response.properties[0].building_size.size + "sqft");
+            $("#rooms2").html(response.properties[0].beds);
+            $("#baths2").html(response.properties[0].baths);
+            $("#Property2").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
+            $("#propertyimage2").html("<img src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': 'nPC7ddCo7z7VCsBKTP46U5a2V0wpWWda8jYeuKR0IWA'
+                'apikey': 'u_S7zLzl6RKVpSByjwLMRquhfzRHlvCty7HlCCeWkwI'
             });
 
             // Obtain the default map types from the platform object
@@ -96,7 +93,7 @@ $("#addButton").click(function () {
                 maptypes.vector.normal.map,
                 {
                     zoom: 16,
-                    center: `{ lng: ${lon}, lat: ${lat} }`
+                    center: { lng: response.properties[0].address.lon, lat: response.properties[0].address.lat }
                 });
 
             // Define a variable holding SVG mark-up that defines an icon image:
@@ -109,16 +106,14 @@ $("#addButton").click(function () {
 
             // Create an icon, an object holding the latitude and longitude, and a marker:
             var icon = new H.map.Icon(svgMarkup),
-                coords = `{ lng: ${lon}, lat: ${lat} }`,
+                coords = { lng: response.properties[0].address.lon, lat: response.properties[0].address.lat },
                 marker = new H.map.Marker(coords, { icon: icon });
 
             // Add the marker to the map and center the map at the location of the marker:
             map.addObject(marker);
             map.setCenter(coords);
-        } else {
 
-            alert("Max Quota Reached!");
+        }
 
-        };
     });
 });
