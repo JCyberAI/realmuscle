@@ -1,43 +1,9 @@
 /* Nav Bar Icon */
 body {
     font-family: "Lato", sans-serif;
-    
-    }
-
-/* Carousel */
-.carousel .carousel-item{
-    position: relative;
-    bottom: 0;  
 }
 
-.carousel p{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: flex;
-    bottom: 0;
-}
-
-/* Carousel */
-.slides{
-    position: relative;
-    bottom: 0;  
-    
-}
-
-.slides p{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    bottom: 0;
-    
-    
-}
-
-li {
-
-    background-color:whitesmoke;
-}
-
-/* .sidenav {
+.sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -109,4 +75,11 @@ li {
 
     font-weight: bold;
     font-size: larger;
-} */
+}
+
+img {
+
+    width: 300px;
+    height: 450px;
+
+}

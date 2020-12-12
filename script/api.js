@@ -35,7 +35,7 @@ $("#addButton").click(function () {
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': 'oKl0jdD1HsmhA36BhtbaQ-v8_9ewoRr2lCuC3uqMPcw'
+                'apikey': '0GcOvVAw_OBxJLtSklQxphN4wJLAOvNYOcfvwMuG-rY'
             });
 
             // Obtain the default map types from the platform object
@@ -80,7 +80,7 @@ $("#addButton").click(function () {
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': 'oKl0jdD1HsmhA36BhtbaQ-v8_9ewoRr2lCuC3uqMPcw'
+                'apikey': '0GcOvVAw_OBxJLtSklQxphN4wJLAOvNYOcfvwMuG-rY'
             });
 
             // Obtain the default map types from the platform object
