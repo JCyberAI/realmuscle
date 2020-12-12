@@ -23,12 +23,11 @@ $("#addButton").click(function () {
 
         if (!size1.text()) {
             //property 1
-
+            $("#address1").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
             $("#price1").html("$" + response.properties[0].price);
             $('#size1').text(response.properties[0].building_size.size + " sqft");
             $("#rooms1").html(response.properties[0].beds);
             $("#baths1").html(response.properties[0].baths);
-            $("#Property1").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
             $("#propertyimage1").html("<img src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
 
@@ -36,7 +35,7 @@ $("#addButton").click(function () {
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': 'u_S7zLzl6RKVpSByjwLMRquhfzRHlvCty7HlCCeWkwI'
+                'apikey': 'oKl0jdD1HsmhA36BhtbaQ-v8_9ewoRr2lCuC3uqMPcw'
             });
 
             // Obtain the default map types from the platform object
@@ -71,17 +70,17 @@ $("#addButton").click(function () {
         } else {
 
             //Property 2
+            $("#address2").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
             $("#price2").html("$" + response.properties[0].price);
             $('#size2').html(response.properties[0].building_size.size + "sqft");
             $("#rooms2").html(response.properties[0].beds);
             $("#baths2").html(response.properties[0].baths);
-            $("#Property2").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
             $("#propertyimage2").html("<img src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': 'u_S7zLzl6RKVpSByjwLMRquhfzRHlvCty7HlCCeWkwI'
+                'apikey': 'oKl0jdD1HsmhA36BhtbaQ-v8_9ewoRr2lCuC3uqMPcw'
             });
 
             // Obtain the default map types from the platform object
@@ -116,4 +115,30 @@ $("#addButton").click(function () {
         }
 
     });
+});
+
+$("#Removebutton1").click(function Clearcard1Fields() {
+
+    document.getElementById("address1").textContent = "";
+    document.getElementById("price1").textContent = "";
+    document.getElementById("size1").textContent = "";
+    document.getElementById("rooms1").textContent = "";
+    document.getElementById("baths1").textContent = "";
+    document.getElementById("propertyimage1").innerHTML = "";
+    document.getElementById("mapContainer1").innerHTML = "";
+
+});
+
+
+$("#Removebutton2").click(function Clearcard2Fields() {
+
+    document.getElementById("address2").textContent = "";
+    document.getElementById("price2").textContent = "";
+    document.getElementById("size2").textContent = "";
+    document.getElementById("rooms2").textContent = "";
+    document.getElementById("baths2").textContent = "";
+    document.getElementById("propertyimage2").innerHTML = "";
+    document.getElementById("mapContainer2").innerHTML = "";
+
+
 });
