@@ -31,6 +31,12 @@ $("#addButton").click(function () {
             $("#baths1").html(response.properties[0].baths);
             $("#propertyimage1").html("<img class='materialboxed' src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
+            //MaterialBoxed Zoom
+            $(document).ready(function(){
+            $('.materialboxed').materialbox();
+            });
+
+
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
