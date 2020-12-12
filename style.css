@@ -71,7 +71,7 @@ body {
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
-.card-content {
+.card {
 
     font-weight: bold;
     font-size: larger;
@@ -87,3 +87,9 @@ body {
   top:0;
  left:50%;
 }
+
+/* .mapContainer{
+    position: fixed; 
+    overflow: hidden;
+    max-width: 100%
+} */
