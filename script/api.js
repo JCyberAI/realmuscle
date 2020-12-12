@@ -31,10 +31,6 @@ $("#addButton").click(function () {
             $("#baths1").html(response.properties[0].baths);
             $("#propertyimage1").html("<img class='materialboxed' src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
-            //MaterialBoxed Zoom
-            $(document).ready(function(){
-            $('.materialboxed').materialbox();
-            });
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
@@ -79,7 +75,12 @@ $("#addButton").click(function () {
             $('#size2').html(response.properties[0].building_size.size + "sqft");
             $("#rooms2").html(response.properties[0].beds);
             $("#baths2").html(response.properties[0].baths);
-            $("#propertyimage2").html("<img src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
+            $("#propertyimage2").html("<img class='materialboxed' src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
+
+            //MaterialBoxed Zoom
+            $(document).ready(function(){
+                $('.materialboxed').materialbox();
+                });
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
