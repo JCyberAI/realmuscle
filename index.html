@@ -4,11 +4,11 @@
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-     <!-- Font awesome css -->
+    <!-- Font awesome css -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
@@ -44,42 +44,50 @@
         </div>
         <button class="btn-floating btn-large waves-effect waves-light green" id="addButton"><i
                 class="material-icons">add</i></button>
-    </div>    
-    
+    </div>
+
 
     <!-- Slider -->
     <div class="slider slider-fixed-item">
         <ul class="slides">
-          <li>
-            <img src="https://ap.rdcpix.com/6afeb9f8f715cff47dae64b9cc8aac6dl-m2767432257x.jpg" id="propertyimage1"> <!-- random image -->
-            <div class="caption left-align"> 
-              <div class="white-text bold" id="info-text">
-                <p>Price: <span id="price1"></span></p>
-                <p>Size: <span id="size1"></span></p>
-                <p>Rooms: <span id="rooms1"></span></p>
-                <p>Baths: <span id="baths1"></span></p>
-                <p class="map" href="#">Map</p>
-        </li>
-        <li>
-            <img src="https://ap.rdcpix.com/6afeb9f8f715cff47dae64b9cc8aac6dl-m2767432257x.jpg" id="propertyimage1"> <!-- random image -->
-            <div class="caption left-align"> 
-              <div class="white-text bold" id="info-text">
-                <p>Price: <span id="price1"></span></p>
-                <p>Size: <span id="size1"></span></p>
-                <p>Rooms: <span id="rooms1"></span></p>
-                <p>Baths: <span id="baths1"></span></p>
-                <p class="map" href="#">Map</p>
-        </li>
-            </div>
-            </div>
-          </li>
-        </ul>
-        
-      </div>
+            <li>
 
-      <!-- Remove Button -->
-      <div class="col 12 center">
-      <a class="waves-effect waves-light btn red">Remove</a>
+                <!--<img src="https://ap.rdcpix.com/6afeb9f8f715cff47dae64b9cc8aac6dl-m2767432257x.jpg" id="propertyimage1"> random image -->
+                <div class="caption left-align">
+                    <div class="black-text" id="info-text">
+                        <p id="propertyimage1"></p>
+                        <span class="card-title" id="Property1"></span>
+                        <p class="black-text">Price: <span id="price1"></span></p>
+                        <p class="black-text">Size: <span id="size1"></span></p>
+                        <p class="black-text">Rooms: <span id="rooms1"></span></p>
+                        <p class="black-text">Baths: <span id="baths1"></span></p>
+                        <p style="width: 300px; height: 300px" id="mapContainer1"></p>
+                        <!--<p<p class="map" href="#">Map</p>-->
+            </li>
+            <li>
+
+                <!--<img src="https://ap.rdcpix.com/6afeb9f8f715cff47dae64b9cc8aac6dl-m2767432257x.jpg" id="propertyimage1"> random image -->
+                <div class="caption left-align">
+                    <div class="black-text" id="info-text">
+                        <p id="propertyimage2"></p>
+                        <span class="card-title" id="Property2"></span>
+                        <p> class="black-text"Price: <span id="price1"></span></p>
+                        <p class="black-text">Size: <span id="size1"></span></p>
+                        <p class="black-text">Rooms: <span id="rooms1"></span></p>
+                        <p class="black-text">Baths: <span id="baths1"></span></p>
+                        <p class="black-text" style="width: 300px; height: 300px" id="mapContainer2"></p>
+                        <!--<p class="map" href="#">Map</p>-->
+            </li>
+    </div>
+    </div>
+    </li>
+    </ul>
+
+    </div>
+
+    <!-- Remove Button -->
+    <div class="col 12 center">
+        <a class="waves-effect waves-light btn red">Remove</a>
     </div>
 
     <!-- <div class="row">
@@ -137,8 +145,10 @@
 
     </footer>
 
-        <!-- Compiled and minified JavaScript from materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript from materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
@@ -147,21 +157,22 @@
 
     <script>
         //Sidenav
-        $(document).ready(function(){
-        $('.sidenav').sidenav();
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
         });
 
         //Carousel
         $('.carousel.carousel-slider').carousel({
-        fullWidth: true,
-        indicators: true
+            fullWidth: true,
+            indicators: true
         });
 
         //slider
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.slider').slider({
-                indicators:true,
-                interval:60000
+                height: 1000,
+                indicators: true,
+                interval: 60000
             });
         });
     </script>
