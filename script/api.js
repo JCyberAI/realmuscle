@@ -20,6 +20,7 @@ $("#addButton").click(function () {
         //console.log(response);
 
         var size1 = $("#size1");
+        var size2 = $("#size2");
 
         if (!size1.text()) {
             //property 1
@@ -28,9 +29,12 @@ $("#addButton").click(function () {
             $('#size1').text(response.properties[0].building_size.size + " sqft");
             $("#rooms1").html(response.properties[0].beds);
             $("#baths1").html(response.properties[0].baths);
-            $("#propertyimage1").html("<img src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
+            $("#propertyimage1").html("<img class='materialboxed' src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
-
+            //MaterialBoxed Zoom
+            $(document).ready(function(){
+            $('.materialboxed').materialbox();
+            });
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
@@ -67,7 +71,7 @@ $("#addButton").click(function () {
             map.addObject(marker);
             map.setCenter(coords);
 
-        } else {
+        } else if (!size2.text()) {
 
             //Property 2
             $("#address2").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
@@ -112,7 +116,10 @@ $("#addButton").click(function () {
             map.addObject(marker);
             map.setCenter(coords);
 
-        }
+        } else {
+            //If max properties added
+            alert("Max quota has reached, please remove a property!!");
+        };
 
     });
 });
