@@ -4,7 +4,11 @@ API control:        Qi Feng
 Html/CSS:           Eamon McHugh
 General:            Jeff Woda
 
+<<<<<<< HEAD
 1. Most of the layout is determined in HTML and CSS only the API key is really handled via JS file.
+=======
+1. All of the layout is determined in HTML and CSS only the API key is really handled via js file.
+>>>>>>> upstream/main
 
 2. The wireframe has the applications logo across the top as header.
 
@@ -33,5 +37,10 @@ f) both card inputs are identical differentiated via a number 1 for card one and
 g) the footer contains the information on the developer
 h) the main.js file simply controls the function of the two buttons to clear the field inputs
 i) the api.js creates a constant object reference for the main realtor.com api call. 
+<<<<<<< HEAD
 j) The realtor APS call includes the longitude and latitude reference subsequently used to pull the map information.
 k) both input field functions and API calls are identical except for the differentiation on numbers 1 for card one and 2 for card 2.
+=======
+j) The realtor api call includes the longitute and latitude reference subsequently used to pull the map information.
+k) both input field functions and api calls are identical except for the differentiation on numbers 1 for card one and 2 for card 2.
+>>>>>>> upstream/main
