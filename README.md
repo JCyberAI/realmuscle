@@ -4,7 +4,7 @@ API control:        Qi Feng
 Html/CSS:           Eamon McHugh
 General:            Jeff Woda
 
-1. Most of the layout is determined in HTML and CSS only the API key is really handled via js file.
+1. All of the layout is determined in HTML and CSS only the API key is really handled via js file.
 
 2. The wireframe has the applications logo acros the top as header.
 
