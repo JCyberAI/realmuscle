@@ -71,25 +71,18 @@ body {
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
+/* card styling */
 .card {
 
     font-weight: bold;
     font-size: larger;
     overflow: hidden;
-    position:relative
-}
-.container2 img {
-    height:100%;
-    width: 100%;
-}
-.js-fix {
-  position:absolute;
-  top:0;
- left:50%;
+    position:relative;
+    border-radius: 5px;
 }
 
-/* .mapContainer{
-    position: fixed; 
-    overflow: hidden;
-    max-width: 100%
-} */
+.map-container{
+    
+}
+
+

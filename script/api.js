@@ -11,7 +11,7 @@ $("#addButton").click(function () {
         "url": "https://realtor.p.rapidapi.com/properties/v2/list-by-mls?mls_id=" + getmlsid.mlsid + "&offset=0&limit=10",
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "f217e49726msh083ea4d114998fcp1ba18cjsn9a4d6fb8a28c",
+            "x-rapidapi-key": "1f4e823badmsh0d4214efda55fa3p1ab489jsn3ef7786c2a73",
             "x-rapidapi-host": "realtor.p.rapidapi.com"
         }
     };
@@ -26,22 +26,22 @@ $("#addButton").click(function () {
             //property 1
             $("#address1").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
             $("#price1").html("$" + response.properties[0].price);
-            $('#size1').text(response.properties[0].building_size.size + " sqft");
+            $('#size1').text(response.properties[0].building_size.size + "sqft");
             $("#rooms1").html(response.properties[0].beds);
             $("#baths1").html(response.properties[0].baths);
             $("#propertyimage1").html("<img class='materialboxed' src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
-            //MaterialBoxed Zoom
-            $(document).ready(function(){
-            $('.materialboxed').materialbox();
-            });
+            // //MaterialBoxed Zoom
+            // $(document).ready(function(){
+            // $('.materialboxed').materialbox();
+            // });
 
 
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': '0GcOvVAw_OBxJLtSklQxphN4wJLAOvNYOcfvwMuG-rY'
+                'apikey': '1f4e823badmsh0d4214efda55fa3p1ab489jsn3ef7786c2a73'
             });
 
             // Obtain the default map types from the platform object
@@ -83,15 +83,15 @@ $("#addButton").click(function () {
             $("#baths2").html(response.properties[0].baths);
             $("#propertyimage2").html("<img class='materialboxed' src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
-            //MaterialBoxed Zoom
-            $(document).ready(function(){
-                $('.materialboxed').materialbox();
-                });
+            // //MaterialBoxed Zoom
+            // $(document).ready(function(){
+            //     $('.materialboxed').materialbox();
+            //     });
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': '0GcOvVAw_OBxJLtSklQxphN4wJLAOvNYOcfvwMuG-rY'
+                'apikey': '1f4e823badmsh0d4214efda55fa3p1ab489jsn3ef7786c2a73'
             });
 
             // Obtain the default map types from the platform object
@@ -125,7 +125,7 @@ $("#addButton").click(function () {
 
         } else {
             //If max properties added
-            alert("Max quota has reached, please remove a property!!");
+            $("#Alert").html("Max quota has reached, please remove a property!!");
         };
 
     });

@@ -24,3 +24,7 @@ $("#Removebutton2").click(function Clearcard2Fields() {
 
 });
 
+//MaterialBoxed Zoom
+$(document).ready(function(){
+    $('.materialboxed').materialbox();
+    });
