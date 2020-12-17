@@ -1,6 +1,5 @@
 USER STORY:
 
-Real Estate Agent would like to have a site to refer his clients to with mls id's he provides for them to check and compare up to two properties at a time. 
+Real Estate Agent would like to have a site to refer to his clients, with mls id's he provides for them to check and compare. Up to two properties at a time can be compared. 
 
-It should provide bear bone information on pricing, bedrooms and size a picture as well as a map showing the location of the property.
-s
+The site will provide bear bone information on pricing, bedrooms, size, bathrooms, a picture, and a map showing the location of the property along with the address.
