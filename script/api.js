@@ -116,7 +116,8 @@ $("#addButton").click(function () {
         } else {
             //If max properties added
             // $("#Alert").html("Max quota has reached, please remove a property!!");
-            M.toast({html: 'Max Properties Reached. Remove One to Porceed', classes: 'red'});
+            M.toast({html: 'Max Properties Reached. Remove One to Porceed', classes: 'red rounded', panning: top});
+
         };
 
     });
