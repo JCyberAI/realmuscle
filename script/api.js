@@ -35,7 +35,7 @@ $("#addButton").click(function () {
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': '1f4e823badmsh0d4214efda55fa3p1ab489jsn3ef7786c2a73'
+                'apikey': 'ZSnP3XVaODStAFtIDo2HvUWEiLiQPeyx-otR4YhI7dA'
             });
 
             // Obtain the default map types from the platform object
@@ -81,7 +81,7 @@ $("#addButton").click(function () {
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': '1f4e823badmsh0d4214efda55fa3p1ab489jsn3ef7786c2a73'
+                'apikey': 'ZSnP3XVaODStAFtIDo2HvUWEiLiQPeyx-otR4YhI7dA'
             });
 
             // Obtain the default map types from the platform object
@@ -116,7 +116,7 @@ $("#addButton").click(function () {
         } else {
             //If max properties added
             // $("#Alert").html("Max quota has reached, please remove a property!!");
-            M.toast({html: 'Max Properties Reached. Remove One to Porceed', classes: 'red rounded', panning: top});
+            M.toast({ html: 'Max Properties Reached. Remove One to Porceed', classes: 'red rounded', panning: top });
 
         };
 
