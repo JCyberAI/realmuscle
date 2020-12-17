@@ -3,7 +3,7 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-.sidenav {
+/* .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -27,15 +27,15 @@ body {
 
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
-}
+} */
 
-.closebtn {
+/* .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px !important;
     margin-left: 50px;
-}
+} */
 
 #main {
     transition: margin-left .5s;
@@ -79,10 +79,33 @@ body {
     overflow: hidden;
     position:relative;
     border-radius: 5px;
+    font-size: 16px;
+    background-color: #eceff1;
 }
 
-.map-container{
+.card-image{
     
 }
 
+.card-content{
+    padding: 10px;
+    border: 10px;
+}
 
+.map-container{
+
+}
+
+/* input styling  */
+.input{
+    padding-top: 5px;
+}
+
+
+.rmv-btn{
+    align-items: center;
+}
+
+#alert{
+    text-emphasis: none;
+}

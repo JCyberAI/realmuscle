@@ -30,7 +30,7 @@
 
 <body>
     <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper blue-grey darken-4">
             <div class="brand-logo center">Real Muscle</div>
         </div>
     </nav>
@@ -38,21 +38,21 @@
 
     <!-- Main Body  -->
     <!-- adress field -->
-    <div class="row">
+    <div class="row input">
         <div class="input-field col s10">
             <input placeholder="Enter MLS ID" id="MLSID" type="text" class="validate">
         </div>
-        <button class="btn-floating btn-large waves-effect waves-light red" id="addButton"><i
-                class="material-icons">add</i></button>
+        <button class="btn-floating btn-large waves-effect waves-light green" id="addButton"><i
+                class="material-icons">home</i></button>
     </div>
 
     <div id="Alert"></div>
 
-
+                <!-- cards -->
     <div class="row">
         <div class="col s6">
             <div class="card" id="card1">
-                <div class="card-image">
+                <div class="card-image materialboxed">
                     <p id="propertyimage1"></p>
                 </div>
                 <div class="card-content">
@@ -62,15 +62,19 @@
                     <p>Rooms: <span id="rooms1"></span></p>
                     <p>Baths: <span id="baths1"></span></p>
                 </div>
+
+                    <!-- Map -->
                 <div class="map-container materialboxed" style="width: 300px; height: 300px" id="mapContainer1"></div>
             </div>
-            <div class="col s12"><a class="waves-effect waves-light btn-large" id="Removebutton1">Remove</a>
+            
+                <!-- Remover btn -->
+            <div class="col s12 rmv-btn offset-s1"><a class="waves-effect red waves-light btn-large align-center" id="Removebutton1">Remove</a>
             </div>
         </div>
 
         <div class="col s6">
             <div class="card" id="card2">
-                <div class="card-image">
+                <div class="card-image materialboxed">
                     <p id="propertyimage2"></p>
                 </div>
                 <div class="card-content">
@@ -81,15 +85,17 @@
                     <p>Baths: <span id="baths2"></span></p>
 
                 </div>
+                    <!-- Map -->
                 <div class="map-container materialboxed" style="width: 300px; height: 300px" id="mapContainer2"></div>
-            </div>
-            <div class="col s12"><a class="waves-effect waves-light btn-large" id="Removebutton2">Remove</a>
+                </div>
+                <!-- Remover btn -->
+            <div class="col s12 rmv-btn offset-s1"><a class="waves-effect red waves-light btn-large" id="Removebutton2">Remove</a>
             </div>
         </div>
     </div>
 
     <!-- footer -->
-    <footer class="page-footer">
+    <footer class="page-footer blue-grey darken-4">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
