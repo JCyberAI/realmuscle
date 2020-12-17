@@ -1,9 +1,15 @@
+// Capture Input from Form Field
 $("#addButton").click(function () {
 
     const getmlsid = {
         "mlsid": document.getElementById("MLSID").value
         //"mlsid": 170307347//
     }
+    apiCall(getmlsid)
+})
+
+// Main API handling and data placing function
+function apiCall(getmlsid) {
 
     const settings = {
         "async": true,
@@ -17,12 +23,16 @@ $("#addButton").click(function () {
     };
 
     $.ajax(settings).done(function (response) {
-        //console.log(response);
 
         var size1 = $("#size1");
         var size2 = $("#size2");
 
         if (!size1.text()) {
+
+            // property card reference for local story
+            c = 1
+            putStore(getmlsid, c)
+
             //property 1
             $("#address1").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
             $("#price1").html("$" + response.properties[0].price);
@@ -31,11 +41,13 @@ $("#addButton").click(function () {
             $("#baths1").html(response.properties[0].baths);
             $("#propertyimage1").html("<img class='' src=" + '"' + response.properties[0].thumbnail + '"' + " alt='Property Image'>");
 
+            // Here .com api key used twice copy paste here to update (very fickle)
+            var keyH = "ZSnP3XVaODStAFtIDo2HvUWEiLiQPeyx-otR4YhI7dA"
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
             var platform = new H.service.Platform({
-                'apikey': 'ZSnP3XVaODStAFtIDo2HvUWEiLiQPeyx-otR4YhI7dA'
+                'apikey': keyH
             });
 
             // Obtain the default map types from the platform object
@@ -69,6 +81,10 @@ $("#addButton").click(function () {
 
         } else if (!size2.text()) {
 
+            // property card reference for local story
+            c = 2
+            putStore(getmlsid, c)
+
             //Property 2
             $("#address2").html(response.properties[0].address.line + ", " + response.properties[0].address.city + ", " + response.properties[0].address.state_code + " " + response.properties[0].address.postal_code);
             $("#price2").html("$" + response.properties[0].price);
@@ -80,8 +96,9 @@ $("#addButton").click(function () {
 
             //call Here.com api to get map image based on coordinates
             // Initialize the platform object:
+            var keyH = "ZSnP3XVaODStAFtIDo2HvUWEiLiQPeyx-otR4YhI7dA"
             var platform = new H.service.Platform({
-                'apikey': 'ZSnP3XVaODStAFtIDo2HvUWEiLiQPeyx-otR4YhI7dA'
+                'apikey': keyH
             });
 
             // Obtain the default map types from the platform object
@@ -116,9 +133,8 @@ $("#addButton").click(function () {
         } else {
             //If max properties added
             // $("#Alert").html("Max quota has reached, please remove a property!!");
-            M.toast({ html: 'Max Properties Reached. Remove One to Porceed', classes: 'red rounded', panning: top });
-
+            M.toast({ html: 'Max Properties Reached', classes: 'red' });
         };
 
     });
-});
+};
